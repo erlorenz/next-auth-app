@@ -22,9 +22,7 @@ const handler = NextAuth({
       if (account?.provider === "google") {
         return (
           //@ts-ignore
-          profile?.email_verified &&
-          (profile.email?.endsWith("@manamed.com") ||
-            profile.email?.endsWith("@mtmchealth.com"))
+          profile?.email_verified && profile.email?.endsWith("@example.com")
         );
       }
       return true;
